@@ -1,7 +1,7 @@
 # Try keeping it at 4
 - name: Home
-  link: /
+  link: /blog/
 - name: Posts
-  link: /posts
+  link: /blog/posts
 - name: Authors
-  link: /authors
+  link: /blog/authors
