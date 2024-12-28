@@ -1,0 +1,36 @@
+---
+layout: default
+title: "Nicolas Okuly's Posts"
+permalink: /posts
+---
+<link rel="stylesheet" href="{{ '/assets/css/posts.css' | relative_url }}">
+<br>
+<h2>Complete list of all posts</h2>
+
+<script src="{{ '/assets/js/posts.js' | relative_url }}" defer></script>
+<div id="posts-search">
+  <input type="text" placeholder="Search posts" name="search" id="q" onkeyup="filterList()">
+
+  <select name="select" id="select" onchange="selectFilter()"">
+    <option value="sao">Filter by tag</option>
+    {% for tag in site.tags %}
+      {% for value in tag[0] %}
+        <option value="{{ value }}">{{ value }}</option>
+      {% endfor %}
+    {% endfor %}
+  </select>
+
+</div>
+<br>
+<ul class="post-list">
+    {% for post in site.posts %}
+      <li class="post">
+        <a href="{{ post.url | relative_url }}">
+            <h3 class="post-name">{{ post.title }}</h3>
+            <p class="post-data">{{ post.author }} - {{ post.date | date_to_string: "ordinal", "US" }}</p>
+            <p class="tags"><b>Tags: </b> {{ post.tags | array_to_sentence_string }}</p>
+            {{ post.excerpt }}
+        </a>
+      </li>
+    {% endfor %}
+</ul>

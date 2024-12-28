@@ -1,0 +1,66 @@
+---
+---
+header {
+    background-image: url("{{ '/assets/images/headers/gold.jpg' | relative_url }}");
+    background-repeat: none;
+    background-size: cover;
+    padding: 20px;
+    min-height: 25vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+h1 { font-size: 5em; }
+header p { font-size: 1.75em; }
+#data {
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+.tag {
+    font-size: 1.25rem;
+    background-color: black;
+    padding: 7px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+.container {
+    width: 75%;
+    background-color: white;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.container > * { margin: 15px; }
+.container p {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.container img, .container em, .container iframe {
+    width: 50%;
+    align-self: center;
+}
+
+@media (max-width: 786px) {
+    .container {
+        width: 100%;
+    }
+    .container img, .container em, .container iframe {
+        width: 100%;
+        align-self: center;
+        margin: 0;
+    }
+}
+@media (max-width: 450px) {
+    h1 { font-size: 4em; }
+    header p { font-size: 1.5em; }
+    .tag { font-size: 0.75em; }
+}
+@media (max-width: 400px) {
+    h1 { font-size: 3em; word-break: break-all; }
+}

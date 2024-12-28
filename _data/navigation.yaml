@@ -1,0 +1,7 @@
+# Try keeping it at 4
+- name: Home
+  link: /
+- name: Posts
+  link: /posts
+- name: Authors
+  link: /authors

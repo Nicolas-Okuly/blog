@@ -1,0 +1,77 @@
+---
+---
+body {
+    text-align: center;
+}
+h2 {
+    font-size: 2em;
+    margin: 15px;
+}
+
+.post-list {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 15px;
+    gap: 10px;
+    list-style-type: none;
+}
+.post {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+}
+.post h3 {
+    text-align: center;
+    font-size: 1.5em;
+}
+.post:hover h3 {
+    text-decoration: underline;
+    color: blue;
+}
+.post-data {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2em;
+}
+.post a {
+    text-decoration: none;
+    color: black;
+}
+.post .tags {
+    margin-bottom: 0.5em;
+}
+@media (max-width: 786px) {
+    .post-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+#posts-search > input {
+    width: 50%;
+    font-size: larger;
+    padding: 5px;
+    margin-left: 5px;
+    border: 1px solid black;
+    border-radius: 0;
+}
+#posts-search > select {
+    font-size: larger;
+    background-color: #fff;
+    padding: 4px;
+    margin-left: 5px;
+    border: 1px solid black;
+    border-radius: 0;
+}
+#posts-search > input:focus, select:focus { outline: none; }
+
+@media (max-width: 786px) {
+    #posts-search > input, #posts-search > select { 
+        margin: 0 auto;
+        width: 80%;
+        margin-bottom: 5px;
+        display: block;
+    }
+    #posts-search > select { text-align: center; }
+}

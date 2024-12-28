@@ -1,0 +1,11 @@
+defaults:
+  -
+    scope: 
+      path: ""
+      type: "posts"
+    values:
+      permalink: /:year/:month/:day/:title
+
+url: "https://scaling-computing-machine-9pvvwr5jqp63x544-4000.app.github.dev"
+plugins:
+  - jekyll-sitemap

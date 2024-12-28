@@ -1,0 +1,25 @@
+---
+layout: default
+title: "Authors"
+permalink: /authors
+---
+<h1>Blog Authors</h1>
+{% for author in site.data.authors %}
+    <h2>{{ author.name }}</h2>
+    <a href="{{ author.url }}">Website</a>
+    <h3>Articles</h3>
+    <ul>
+        {% for post in site.posts %}
+            {% if post.author == author.name %}
+                <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <h3>Socials</h3>
+    <ul>
+        {% for social in author.socials %}
+            <li><a target="_blank" href="{{ social.url }}">{{ social.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endfor %}

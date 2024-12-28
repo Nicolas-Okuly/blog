@@ -1,0 +1,40 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{{ '/assets/css/actual-posts.css' | relative_url }}">
+        <meta name="keywords" content="{{ page.tags | array_to_sentence_string: '' }}">
+        <meta name="description" content="{{ page.excerpt }}">
+        {% include head.html %}
+
+        <script type="application/ld+json">
+            { 
+                "@context": "https://schema.org", 
+                "@type": "BlogPosting",
+                "headline": "{{ page.title }}",
+                "keywords": "{{ page.tags | array_to_sentence_string: "" }}",
+                "image": "{{ page.thumbnail }}"
+                "url": "{{ page.url | absolute_url }}",
+                "description": "{{ page.excerpt }}",
+                "author": {
+                    "@type": "Person",
+                    "name": "{{ page.author }}"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        {% include navbar.html %}
+        <header>
+            <h1>{{ page.title }}</h1>
+            <p id="data">{{ page.date | date_to_string: "ordinal", "US" }} - {{ page.author }}</p>
+            <p>{% for tag in page.tags %} <span class="tag">{{ tag }}</span> {% endfor %}</p>
+        </header>
+
+        <main class="container">
+            {{ content }}
+        </main>
+        {% include footer.html %}
+    </body>
+</html>
