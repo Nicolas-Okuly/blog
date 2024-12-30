@@ -6,6 +6,6 @@ defaults:
     values:
       permalink: /:year/:month/:day/:title
 
-url: "https://scaling-computing-machine-9pvvwr5jqp63x544-4000.app.github.dev"
+url: "https://nicolas-okuly.github.io/blog/"
 plugins:
   - jekyll-sitemap

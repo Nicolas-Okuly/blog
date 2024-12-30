@@ -28,8 +28,13 @@ permalink: /posts
         <a href="{{ post.url | relative_url }}">
             <h3 class="post-name">{{ post.title }}</h3>
             <p class="post-data">{{ post.author }} - {{ post.date | date_to_string: "ordinal", "US" }}</p>
-            <p class="tags"><b>Tags: </b> {{ post.tags | array_to_sentence_string }}</p>
-            {{ post.excerpt }}
+            <div class="post-cont">
+              <img src="{{ post.thumbnail }}" alt="{{ post.thumbnail_alt }}">
+              <div>
+                <p class="tags"><b>Tags: </b> {{ post.tags | array_to_sentence_string }}</p>
+                {{ post.excerpt }}
+              </div>
+            </div>            
         </a>
       </li>
     {% endfor %}

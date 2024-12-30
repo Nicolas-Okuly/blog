@@ -1,0 +1,116 @@
+---
+---
+.hero {
+    background-image: url("{{ '/assets/images/headers/gold.jpg' | relative_url }}");
+    background-repeat: none;
+    background-size: cover;
+    padding: 20px;
+    min-height: 25vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+.recent-a, .recent-a:visited, .recent-a:active {
+    text-decoration: none;
+    color: black;
+}
+.recent {
+    background-color: white;
+    width: 95%;
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    font-size: 1.3em;
+}
+.recent img {
+    width: 30%;
+}
+hr {
+    margin: 10px 0;
+}
+.recent button {
+    background-color: black;
+    display: block;
+    color: white;
+    border: none;
+    padding: 7px;
+    margin: 10px;
+    border-radius: 12px;
+    font-size: 1.1em;
+    justify-self: center;
+}
+.recent-a:hover h2 {
+    text-decoration: underline;
+    color: blue;
+}
+.vert-line {
+    border: 1px solid gray;
+    margin: 0 15px;
+}
+
+.authors {
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    width: 50%;
+    margin: 15px auto;
+    border-radius: 12px;
+}
+.authors h2 {
+    font-size: 2.5em;
+}
+.authors img {
+    width: 30%;
+}
+.authors-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+.authors-box a, .authors-box a:visited, .authors-box a:active {
+    background-color: black;
+    display: block;
+    color: white;
+    padding: 7px;
+    margin: 10px;
+    font-size: 1.25em;
+    text-decoration: none;
+}
+.authors-box a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+
+@media (max-width: 900px) {
+    .recent {
+        flex-direction: column;
+    }
+    .authors {
+        flex-direction: column;
+        width: fit-content;
+        margin: 15px 15px;
+    }
+    .recent img, .authors img {
+        margin: 0 auto;
+        width: 25%;
+    }
+    .vert-line {
+        display: none;
+    }
+}
+@media (max-width: 575px) {
+    .recent img, .authors img {
+        width: 50%;
+    }
+}
+
+footer {
+    position: static !important;
+    margin-top: 5px;
+}

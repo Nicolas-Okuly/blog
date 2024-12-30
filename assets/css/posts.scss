@@ -42,6 +42,23 @@ h2 {
 .post .tags {
     margin-bottom: 0.5em;
 }
+
+.post-cont {
+    display: flex;
+    gap: 15px;
+    margin: 5px;
+}
+.post-cont img {
+    height: 100px;
+    max-width: min-content;
+    align-self: center;
+}
+@media (max-width: 1300px) {
+    .post-cont {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 786px) {
     .post-list {
         grid-template-columns: 1fr;

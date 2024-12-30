@@ -3,6 +3,7 @@ layout: post
 author: Nicolas Okuly
 tags: Bananas Fruit Berries Information
 thumbnail: https://www.shutterstock.com/image-photo/charming-photo-ripe-banana-lying-260nw-2475573467.jpg
+thumbnail_alt: Image of banana
 ---
 
 A banana is an edible fruit – botanically a berry – produced by several

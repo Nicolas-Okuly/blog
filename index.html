@@ -3,4 +3,36 @@ layout: default
 title: "Blog - Nicolas Okuly"
 ---
 
-<h1>Welcome To My Blog!</h1>
+<link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
+
+<header class="hero">
+    <h1>Nicolas Okuly's Blog</h1>
+    <br>
+    <p>This is my blog where I will write articles on random things that interest me. Have fun!</p>
+</header>
+
+<a class="recent-a" href="{{ site.posts[0].url | relative_url }}">
+    <div class="recent">
+        <img src="{{ site.posts[0].thumbnail }}" alt="{{ site.posts[0].thumbnail_alt }}">
+        <div class="vert-line"></div>
+        <div>
+            <h2>Latest Post: {{ site.posts[0].title }}</h2>
+            <p><b>Published:</b> {{ site.posts[0].date | date_to_string: "ordinal", "US" }}</p>
+            <p><b>By:</b> {{ site.posts[0].author }}</p>
+            <p><b>Tags:</b> {{ site.posts[0].tags | array_to_sentence_string }}</p>
+            <hr>
+            {{ site.posts[0].excerpt }}
+            
+            <button>Read more</button>
+        </div>
+    </div>
+</a>
+
+<!-- <div class="authors">
+    <img src="{{ '/assets/images/author.svg' | relative_url }}" alt="Author symbol">
+    <div class="vert-line"></div>
+    <div class="authors-box">
+        <h2>Check out the author</h2>
+        <a href="{{ '/authors' | relative_url }}">Click here</a>
+    </div>
+</div> -->
