@@ -6,6 +6,6 @@ defaults:
     values:
       permalink: /:year/:month/:day/:title
 
-url: "https://nicolas-okuly.github.io/blog/"
+url: "https://nicolas-okuly.github.io"
 plugins:
   - jekyll-sitemap
