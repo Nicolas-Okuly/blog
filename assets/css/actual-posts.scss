@@ -38,11 +38,17 @@ header p:nth-of-type(2) {
 }
 
 .container > * { margin: 15px; }
-.container p {
+.container p { max-width: 100%; }
+.container p:has(img) {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
 }
+
+a[target="_blank"]::after {
+    content: "↗";
+    font-size: 0.8em;
+    margin-left: 0.2em;
+  }
 
 .container img, .container em, .container iframe {
     width: 50%;

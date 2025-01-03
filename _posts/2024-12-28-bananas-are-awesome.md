@@ -2,6 +2,7 @@
 layout: post
 author: Nicolas Okuly
 tags: Bananas Fruit Berries Information
+main-tags: [Information]
 thumbnail: https://www.shutterstock.com/image-photo/charming-photo-ripe-banana-lying-260nw-2475573467.jpg
 thumbnail_alt: Image of banana
 ---

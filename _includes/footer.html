@@ -1,18 +1,3 @@
 <footer>
     <p>&copy; <span id="footer-year"></span> Nicolas Okuly. Powered by Jekyll.</p>
-    <script>
-        // Update the year to whatever the current year is.
-        document.getElementById("footer-year").innerHTML = new Date().getFullYear();
-
-        const body_height = document.body.offsetHeight;
-        const window_height = window.innerHeight;
-
-        const footer = document.querySelector("footer");
-        const calc_body_height = body_height + footer.offsetHeight;
-
-        if (calc_body_height < window_height) {
-            footer.style.position = "fixed";
-            footer.style.bottom = "0";
-        }
-    </script>
 </footer>

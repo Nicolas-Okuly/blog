@@ -13,9 +13,9 @@ permalink: /posts
 
   <select name="select" id="select" onchange="selectFilter()"">
     <option value="sao">Filter by tag</option>
-    {% for tag in site.tags %}
-      {% for value in tag[0] %}
-        <option value="{{ value }}">{{ value }}</option>
+    {% for post in site.posts %}
+      {% for tag in post.main-tags %}
+        <option value="{{ tag }}">{{ tag }}</option>
       {% endfor %}
     {% endfor %}
   </select>
