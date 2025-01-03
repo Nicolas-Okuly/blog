@@ -13,7 +13,7 @@ title: "Blog - Nicolas Okuly"
 
 <a class="recent-a" href="{{ site.posts[0].url | relative_url }}">
     <div class="recent">
-        <img src="{{ site.posts[0].thumbnail }}" alt="{{ site.posts[0].thumbnail_alt }}">
+        <img src="{{ site.posts[0].thumbnail | relative_url }}" alt="{{ site.posts[0].thumbnail_alt }}">
         <div class="vert-line"></div>
         <div>
             <h2>Latest Post: {{ site.posts[0].title }}</h2>
